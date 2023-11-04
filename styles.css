@@ -1,0 +1,736 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+html {
+    font-family: 'Poppins', 'sans-serif';
+}
+
+h1, h2 {
+    font-family: 'Yeseva One', serif;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 3rem;
+    line-height: 0.5;
+    text-align: center;
+    text-transform: capitalize;
+    margin-top: 4rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+
+/* h2 styling */
+
+h2 span {
+    display: inline-block;
+    position: relative;
+}
+
+h2 span:before,
+h2 span:after {
+    content: "";
+    position: absolute;
+    height: 5px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    top: 0;
+    width: 35vw;
+}
+
+h2 span:before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+h2 span:after {
+    left: 100%;
+    margin-left: 15px;
+}
+
+
+
+/* Header ---------------------------------*/
+
+header .logo {
+    display: flex;
+}
+
+header .logo img {
+    width: 8%;
+    margin: 1% auto;
+}
+
+header nav {
+    border-top: 1px solid rgb(118, 118, 118);
+}
+
+ul {
+    display: flex;
+    max-width: 50%;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
+}
+header li a {
+    text-transform: uppercase;
+}
+
+header li a:hover {
+    color: #807467;
+}
+
+.banner {
+    background-color: hsla(32, 24%, 77%);
+    background-image: url('./assets/banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 15%;
+    padding-bottom: 50%;
+}
+
+#burger {
+    display: none;
+}
+
+     /* Header Media Queries*/
+
+@media only screen and (max-width:1024px) {
+
+    header li a {
+        font-size: 0.75rem;
+    }
+
+    header ul {
+        padding: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .banner {
+        display: flex;
+        align-items: center;
+        width: 100vw;
+        gap: 0;
+    }
+
+    header .logo {
+        flex: 1;
+    }
+
+    header .logo img {
+        width: 50px;
+        height: max-content;
+        margin-left: 60%;
+        margin-top: 5%;
+        margin-right: 0;
+    }
+
+    header nav {
+        flex: 2.5;
+        margin: 0.5rem 2rem 0 1rem;
+        border-bottom: 1px solid rgb(0, 0, 0);
+        border-top: none;
+    }
+
+    nav ul {
+        max-width: 100%;
+        justify-content: space-evenly;
+    }
+
+    nav li a{
+        font-size: 0.6rem;
+    }
+
+}
+
+@media only screen and (max-width:425px) {
+
+    header nav {
+        display: none;
+    }
+
+    .banner {
+        display: inline-block;
+        padding-bottom: 40%;
+    }
+
+    header .logo img {
+        display: block;
+        margin: 0.5rem auto;
+    }
+
+    div .logo {
+        display: inline;
+    }
+
+    .logo img {
+        margin: 0;
+    }
+
+    #burger {
+        display: inline;
+        position: relative;
+        left: 90%;
+        bottom: 2.5rem;
+    }
+
+}
+
+
+
+/* About Me -------------------------------*/
+
+.about {
+    max-width: 80%;
+    margin: 8rem auto;
+}
+
+.about div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.about img {
+    object-fit: cover;
+    max-width: 55%;
+    flex: 2;
+}
+
+.about .about-text {
+    text-align: center;
+    flex: 1;
+    background-color: white;
+    padding: 2rem;
+    margin-left: -6rem;
+}
+
+.about .signature {
+    font-family: 'Aomine', 'sans-serif';
+    font-size: 1.25rem;
+    word-spacing: 0.25rem;
+}
+
+     /* About Me Media Queries*/
+
+@media only screen and (max-width:1024px) {
+
+    .about {
+        max-width: 85%;
+        margin: 7rem auto;
+    }
+
+    .about .about-text {
+        font-size: 0.75rem;
+        padding: 1.5rem;
+        max-width: 50%;
+        margin-left: -5rem;
+    }
+
+    .about .signature {
+        font-size: 1rem;
+    }
+
+}
+
+@media only screen and (max-width:768px) {
+
+    .about div {
+        flex-flow: column;
+        margin-top: 2rem;
+    }
+
+    .about {
+        max-width: 100%;
+        margin-top: 3rem;
+        margin-bottom: 0;
+    }
+
+    .about div {
+        margin-bottom: 0;
+    }
+
+    .about h2 {
+        margin-top: 0;
+        margin-bottom: 2rem;
+    }
+
+    .about .about-text {
+        margin-left: 0;
+        max-width: 100%;
+        margin-top: -5rem;
+    }
+
+    .about img {
+        max-width: 50%;
+    }
+
+}
+
+
+
+
+/* Call To Action Cards -------------------*/
+
+.cta-cards {
+    margin: 5rem auto;
+    padding: 5rem;
+    gap: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d2c5b6;
+}
+
+.card {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    width: 40%;
+    height: 70vh;
+    padding-bottom: 1rem;
+    background-color: white;
+}
+
+.card img {
+    width: 85%;
+    object-fit: cover;
+    margin: 2rem auto;
+    flex: 1;
+    overflow: hidden;
+}
+
+.card a {
+    text-transform: uppercase;
+    padding: 1rem 1rem;
+    align-self: center;
+    background-color: #807467;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.card a:hover {
+    transform: scale(1.1);
+    transition: 0.2s ease;
+}
+
+
+/* Cards Media Queries*/
+
+@media only screen and (max-width:1024px) {
+
+    .cta-cards {
+        padding: 4rem;
+        margin: 0;
+    }
+
+    .card {
+        width: 70%;
+        height: 60vh;
+    }
+
+    .card a {
+        font-size: 0.75rem;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+    .cta-cards {
+        flex-flow: column;
+    }
+
+    .card {
+        width: 70%;
+        height: auto;
+        padding: 0;
+    }
+
+}
+
+@media only screen and (max-width: 425px) {
+
+    .cta-cards {
+        margin: 0;
+        padding: 2rem;
+    }
+
+    .card a {
+        font-size: 0.6rem;
+    }
+
+    .card img {
+        margin: 1rem;
+    }
+
+}
+
+
+
+/* Portfolio ------------------------------*/
+
+.portfolio {
+    max-width: 100%;
+    margin: 10rem auto;
+}
+
+.portfolio h2 {
+    margin-bottom: 3rem;
+}
+.portfolio-wrapper {
+    display: flex;
+    gap: 0.5rem;
+    margin: 0 0.5rem;
+}
+
+.portfolio-column {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.portfolio-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Portfolio Media Queries*/
+
+@media only screen and (max-width: 1024px) {
+
+    .portfolio {
+        margin: 5rem auto;
+    }
+
+}
+
+@media only screen and (max-width: 425px) {
+
+    .portfolio-column:last-of-type {
+        display: none;
+    }
+}
+
+
+
+/* Testimonials ---------------------------*/
+
+.testimonials {
+    max-width: 100%;
+    padding-bottom: 5rem;
+    background-color: #d2c5b6;
+}
+
+.testimonials h2 {
+    text-transform: capitalize;
+    text-align: center;
+    margin: 3rem auto;
+    padding-top: 5rem;
+}
+
+.testimonials div {
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.testimonials article h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Yeseva One', serif;
+    margin-top: 2rem;
+    text-align: right;
+}
+
+.testimonials article h3::before {
+    content: '- ';
+}
+
+.testimonials div article {
+    background-color: white;
+    margin: 1rem;
+    padding: 2rem;
+}
+
+.testimonials div article p::before {
+    content: '"';
+    font-size: 5rem;
+    line-height: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+    color: #807467;
+}
+
+/* Testimonials Media Queries*/
+
+@media only screen and (max-width: 1024px) {
+
+    .testimonials p {
+        font-size: 0.75rem;
+    }
+
+    .testimonials h3 {
+        font-size: 1rem;
+    }
+
+    .testimonials h2 {
+        padding: 3rem;
+        margin: 0;
+    }
+
+}
+
+@media only screen and (max-width:768px) {
+
+    .testimonials div {
+        flex-flow: column;
+    }
+
+    .testimonials div article {
+        padding: 1.5rem;
+    }
+}
+
+
+/* Team  -----------------------------------*/
+
+.team {
+    max-width: 95%;
+    margin: 0 auto 4rem;
+    padding-top: 1rem;
+}
+
+.team h2 {
+    margin-bottom: 3rem;
+}
+
+.team-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-around;
+    align-content: stretch;
+    align-items: center;
+}
+
+.team-wrapper figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+.team-wrapper figcaption:first-of-type {
+    text-transform: uppercase;
+    padding: 0.5rem 0;
+}
+
+.team-wrapper img {
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+}
+
+/* Team Media Queries*/
+
+@media only screen and (max-width: 1024px) {
+
+    .team-wrapper figcaption {
+        font-size: 0.75rem;
+    }
+}
+
+@media only screen and (max-width: 487px) {
+
+    .team-wrapper {
+        flex-wrap: wrap-reverse;
+    }
+
+    .team-wrapper figure {
+        width: 100%;
+    }
+
+}
+
+
+
+/* Newsletter  -----------------------------*/
+
+.sign-up {
+    max-width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    background-color: #d2c5b6;
+}
+
+.sign-up-wrapper {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.sign-up h3 {
+    text-align: center;
+    padding: 2rem;
+    text-transform: uppercase;
+}
+
+.sign-up form {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-self: center;
+    max-width: 70%;
+    margin: 1rem auto;
+    background-color: white;
+    padding: 1rem;
+}
+
+.sign-up input {
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    margin: 0.5rem;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.sign-up button {
+    background-color: #807467;
+    box-shadow: none;
+    border: none;
+    color: white;
+    max-width: 100%;
+    margin: 2rem auto;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-family: 'poppins', serif;
+    letter-spacing: 0.2rem;
+}
+
+.sign-up button:hover {
+    transform: scale(1.1);
+    transition: 0.2s ease;
+}
+
+/* Newsletter Media Queries*/
+
+@media only screen and (max-width: 1024px) {
+
+    .sign-up h3 {
+        font-size: 1rem;
+    }
+
+    .sign-up input {
+        font-size: 0.75rem;
+    }
+
+    .sign-up button {
+        font-size: 0.75rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .sign-up form {
+        max-width: 80%;
+    }
+}
+
+
+
+/* Footer ---------------------------------*/
+
+footer {
+    max-width: 100%;
+    margin: 5rem auto 1rem;
+    text-align: center;
+    padding-top: 3rem;
+}
+
+footer div h3 {
+    margin: 1rem auto;
+}
+
+footer div img {
+    max-width: 2%;
+    padding: 0.25rem;
+}
+
+footer p {
+    font-size: 0.75rem;
+    margin-top: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-right: 1rem;
+    border-top: 1px solid black;
+    text-align: right;
+}
+
+/* Footer Media Queries*/
+
+@media only screen and (max-width: 1024px) {
+
+    footer div h3 {
+        font-size: 1rem;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+
+    footer div img {
+        max-width: 5%;
+    }
+
+}
+
+
+
+
+/* GENERAL MEDIA QUERIES */
+
+@media only screen and (max-width:1024px) {
+    h2 {
+        font-size: 2rem;
+    }
+
+    h2 span:before,
+    h2 span:after {
+        width: 30vw;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h2 span:before,
+    h2 span:after {
+        width: 16.5vw;
+    }
+}
+
